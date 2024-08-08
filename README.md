@@ -4,5 +4,5 @@ This repository contains software requirement document for a few sample COBOL fi
 
 | COBOL Program | Requirements Document |
 | -------- | ------- |
-| IX106A  | IX106A_SR    |
-| IX105A |      |
+| IX106A  | IX106A_SRS |
+| IX105A | IX105A_SRS |
