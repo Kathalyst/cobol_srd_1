@@ -100,3 +100,44 @@ This COBOL program is designed to test the functionality of working with three d
    - It reports detailed information about failures and unexpected results
 
 Overall, this program is designed to thoroughly test the implementation's ability to handle multiple file types concurrently, ensuring that operations like reading, writing, deleting, and rewriting work correctly across different file organizations. It's likely part of a larger validation suite for COBOL compilers or runtime environments.
+
+## Step By Step Walkthrough
+Here's a step-by-step walkthrough of how this COBOL program works:
+
+1. The program starts with the Identification Division, which identifies the program (IX106A).
+
+2. The Environment Division sets up the configuration and file control information for the program.
+
+3. The Data Division defines the file structures and working storage variables used in the program.
+
+4. The Procedure Division contains the main logic of the program:
+
+   a. CCVS1 Section: This section initializes the program, opens files, and sets up test reporting.
+
+   b. SECT-0001-RIS101 Section: 
+      - Creates a relative file (RL-FR1) randomly.
+      - Writes 225 records to this file.
+
+   c. SECT-0002-RIS101 Section:
+      - Creates a sequential file (SQ-FS1) and an indexed file (IX-FS1) using the relative file as input.
+      - Reads from RL-FR1 and writes to SQ-FS1 and IX-FS1.
+
+   d. SECT-0003-RIS101 Section:
+      - Tests the ability to have all three different file types open and used simultaneously.
+      - Performs various read operations on all three files.
+
+   e. SECT-0004-RIS101 Section:
+      - Tests the ability to delete records from one file type while having other files open.
+      - Deletes a record from the relative file and verifies the deletion.
+
+   f. SECT-TEST-005-RIS101 Section:
+      - Tests the ability to rewrite files while other files are being manipulated.
+      - Performs rewrite operations on relative, sequential, and indexed files.
+
+5. The program includes various test routines to verify the correctness of operations.
+
+6. Throughout the program, there are sections for error handling, reporting test results, and printing details.
+
+7. The program ends with closing files and exiting.
+
+This program is essentially a test suite for file handling operations in COBOL, specifically testing the interactions between relative, sequential, and indexed file types.
