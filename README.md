@@ -6,3 +6,5 @@ This repository contains software requirement document for a few sample COBOL fi
 | -------- | ------- |
 | IX106A.cbl  | IX106A_SRS.md |
 | IX105A.cbl | IX105A_SRS.md |
+
+For more information, contact Anushka at anushka@kathalyst.ai
